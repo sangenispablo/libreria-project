@@ -10,14 +10,14 @@ urlpatterns = [
 from django.urls import include
 
 urlpatterns += [
-    path('catalog/', include('catalog.urls')),
+    path('catalogo/', include('catalogo.urls')),
 ]
 
 #Redirijimos el trafico de la raiz a la app catalogo
 from django.views.generic import RedirectView
 
 urlpatterns += [
-    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='/catalogo/', permanent=True)),
 ]
 
 # Use static() para servir archivos estaticos solo durante el desarrollo
